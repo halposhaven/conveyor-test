@@ -58,6 +58,7 @@ RUN apk --no-cache --no-progress upgrade && \
 
 COPY samba.sh /usr/bin/
 
+
 EXPOSE 137/udp 138/udp 139 445
 
 HEALTHCHECK --interval=60s --timeout=15s \
@@ -65,5 +66,6 @@ HEALTHCHECK --interval=60s --timeout=15s \
 
 VOLUME ["/etc", "/var/cache/samba", "/var/lib/samba", "/var/log/samba",\
             "/run/samba"]
+COPY smb.conf /etc/samba/
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/samba.sh"]
