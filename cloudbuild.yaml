@@ -1,0 +1,8 @@
+steps:
+       # Build the image on GCB
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/starchup-147119/$REPO_NAME:$REVISION_ID', '.']
+
+        # Push the image to GCR
+- name:  'gcr.io/cloud-builders/docker'
+  args: ['push',  'gcr.io/starchup-147119/$REPO_NAME:$REVISION_ID']
