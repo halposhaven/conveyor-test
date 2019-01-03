@@ -4,7 +4,7 @@
 # Ensure that root is running the script.
 ##
 
-USERS="/config-list.conf"
+USERS="./config-list.conf"
 
 cat ${USERS} | \
 while read USER GROUP SMBPASS DIR ; do
