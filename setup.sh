@@ -10,9 +10,8 @@ cat ${USERS} | \
 while read USER GROUP SMBPASS DIR ; do
    
    groupadd ${GROUP} 2> /dev/null
-   adduser ${USER} -g ${GROUP}
 
-   (echo $SMBPASS; echo $SMBPASS) | passwd --stdin ${USER} > /dev/null
+   (echo $SMBPASS; echo $SMBPASS) | adduser ${USER} -g ${GROUP}
    echo Added user ${USER}
 
    smbpasswd -e ${USER} -w ${SMBPASS} > /dev/null

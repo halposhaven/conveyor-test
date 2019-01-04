@@ -1,6 +1,6 @@
 steps:
 
-- name: "glesage/google-cloud-deployment"
+- name: "havochaven/cifs"
   args: ['bash', './setup.sh']
 
        # Build the image on GCB
