@@ -56,9 +56,9 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '' >>$file && \
     rm -rf /tmp/*
 
-COPY samba.sh /usr/bin/ \
-    setup.sh /home/ \
-    config-list.conf /hom/
+COPY samba.sh /usr/bin/ 
+    
+COPY setup.sh config-list.conf /home/
 
 
 EXPOSE 137/udp 138/udp 139 445
