@@ -1,6 +1,6 @@
 steps:
 
-- name: "havochaven/cifs"
+- name: "havochaven/cifs:initial"
   args: ['bash', './setup.sh']
 
        # Build the image on GCB
