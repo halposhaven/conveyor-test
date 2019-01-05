@@ -18,6 +18,6 @@ while read USER GROUP SMBPASS DIR ; do
    (echo $SMBPASS; echo $SMBPASS) | smbpasswd -as ${USER}
    echo -e "${USER} = ${USER}" >> /etc/samba/smbusers
 
- #  mkdir /data/share/${DIR}
- #  chown -R  ${USER}:${GROUP} /data/share/${DIR}
+   mkdir /data/share/${DIR}
+   chown -R  ${USER}:${GROUP} /data/share/${DIR}
 done
