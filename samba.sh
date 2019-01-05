@@ -18,6 +18,13 @@
 
 set -o nounset                              # Treat unset variables as an error
 
+
+#### AUTO CONFIG TEST SETTINGS
+chmod +x /home/setup.sh
+
+/bin/bash /home/setup.sh
+
+
 ### charmap: setup character mapping for file/directory names
 # Arguments:
 #   chars) from:to character mappings separated by ','
