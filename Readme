@@ -1,0 +1,13 @@
+This repo controls the pod that acts as the file server for conveyor access
+
+To add a new cleaner:
+
+1) add a line to config-list.conf with the format of "$USER conveyor $PASS $DIR"
+2) update smb.conf adding a configuration block of the format:
+  [SHARE-NAME]
+        comment = A description, cleaner name should go here
+        path = /data/share/$DIR
+        valid users = $USER
+        public = no
+        writable = yes
+
